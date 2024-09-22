@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int culc_GCD(int a, int b);
+
+int main()
+{
+	int a, b;		//??¬?´???°????±????????????¨??????2???
+	int result;		//a,b?????¬?´???°
+	
+	//2????????\???
+	cin >> a >> b;
+	
+	if(a >= b)
+	{
+		result = culc_GCD(a, b);
+	}
+	else
+	{
+		result = culc_GCD(b, a);
+	}
+	
+	cout << result << endl;
+
+}
+
+/**/
+/**/
+/**/
+int culc_GCD(int a, int b)
+{
+	int temp;
+	while (b != 0)
+	{
+		temp = a;
+		a = b;
+		b = temp % b;
+	}
+	
+	return a;
+
+}
